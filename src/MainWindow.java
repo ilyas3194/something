@@ -1,5 +1,3 @@
-package SnakeGame;
-
 import javax.swing.*;
 
 /**
@@ -9,15 +7,15 @@ public class MainWindow extends JFrame {
     public MainWindow() {
         setTitle("Snake Game");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(400,400);
-        setLocation(500,0);
+        setSize(320,345);
+        setLocation(400,400);
         add(new GameProcess());
         setVisible(true);
 
     }
 
     public static void main(String[] args) {
-
+        System.out.println("Welcome guest");
         MainWindow mainWindow = new MainWindow();
 
     }

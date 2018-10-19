@@ -1,5 +1,3 @@
-package SnakeGame;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,8 +11,8 @@ import java.util.Random;
  */
 public class GameProcess extends JPanel implements ActionListener {
 
-        private final int SIZE = 400;
-        private final int DOT_SIZE = 20;
+        private final int SIZE = 320;
+        private final int DOT_SIZE = 16;
         private final int All_DOTS = 400;
         private Image dot;
         private Image apple;
@@ -41,8 +39,8 @@ public class GameProcess extends JPanel implements ActionListener {
         private void initGame() {
             dots = 3;
             for (int i = 0; i < dots; i++) {
-                x[i] = 60 - i*DOT_SIZE;
-                y[i] = 60;
+                x[i] = 48 - i*DOT_SIZE;
+                y[i] = 48;
             }
             timer = new Timer(250,this);
             timer.start();
@@ -56,7 +54,7 @@ public class GameProcess extends JPanel implements ActionListener {
         }
 
         public void addImage(){
-            ImageIcon iid = new ImageIcon("Snake.png");
+            ImageIcon iid = new ImageIcon("dot.png");
             dot = iid.getImage();
             ImageIcon iia = new ImageIcon("apple.png");
             apple = iia.getImage();
